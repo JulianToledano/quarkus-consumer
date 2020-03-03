@@ -27,4 +27,10 @@ public class PersonResource {
     public Person getPerson(@PathParam String name) {
         return personService.getByName(name);
     }
+
+    @POST
+    @Path("/create/person")
+    public Response createPerson(Person person){
+        return personService.createPerson(person);
+    }
 }
